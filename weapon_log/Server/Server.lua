@@ -23,7 +23,7 @@ AddEventHandler('playerDropped', function(reason)
     local isdead = Character.isdead  
     if isdead and Config.combatlog then
         local webhook = Config.webhook
-        message = GetPlayerName(source) .. " Combat logged"
+        message = GetPlayerName(source) .. " has Combat logged"
         SendWebhookMessage(webhook,message)
         isdead = nil
     end
